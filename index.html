@@ -1,1 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
 
+    <meta
+        name="description"
+        content="Discover sponsorship opportunities with Prodigal Sun Radio — independent, community-driven and ad-free. Where The Mix Never Sleeps!!"
+    >
+
+    <link
+        rel="canonical"
+        href="https://mkuu-amani.github.io/psrsponsorships/"
+    >
+
+    <title>PSR Sponsorships — Prodigal Sun Radio</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Prodigal Sun Radio">
+    <meta property="og:locale" content="en_GB">
+
+    <meta
+        property="og:url"
+        content="https://mkuu-amani.github.io/psrsponsorships/"
+    >
+
+    <meta
+        property="og:title"
+        content="PSR Sponsorships — Prodigal Sun Radio"
+    >
+
+    <meta
+        property="og:description"
+        content="Discover sponsorship opportunities with Prodigal Sun Radio — independent, community-driven and ad-free. Where The Mix Never Sleeps!!"
+    >
+
+    <meta
+        property="og:image"
+        content="https://mkuu-amani.github.io/psrsponsorships/facebook-card.jpg"
+    >
+
+    <meta
+        property="og:image:secure_url"
+        content="https://mkuu-amani.github.io/psrsponsorships/facebook-card.jpg"
+    >
+
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta
+        property="og:image:alt"
+        content="Prodigal Sun Radio sponsorship opportunities"
+    >
+
+    <!-- X / Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta
+        name="twitter:url"
+        content="https://mkuu-amani.github.io/psrsponsorships/"
+    >
+
+    <meta
+        name="twitter:title"
+        content="PSR Sponsorships — Prodigal Sun Radio"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Discover sponsorship opportunities with Prodigal Sun Radio — independent, community-driven and ad-free."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://mkuu-amani.github.io/psrsponsorships/x-card.jpg"
+    >
+
+    <meta
+        name="twitter:image:alt"
+        content="Prodigal Sun Radio sponsorship opportunities"
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            overflow: hidden;
+            color: #fff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .promo-link {
+            position: fixed;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            height: 100dvh;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            background: #000;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        .stage {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .background-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center center;
+            display: block;
+            background: #000;
+            pointer-events: none;
+            filter: contrast(1.12) saturate(1.1) brightness(1.04);
+        }
+
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(0, 0, 0, 0.18) 0%,
+                    rgba(0, 0, 0, 0.04) 45%,
+                    rgba(0, 0, 0, 0.4) 100%
+                );
+        }
+
+        .sun-glow {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+
+            background:
+                radial-gradient(
+                    circle at 50% 42%,
+                    rgba(236, 204, 104, 0.16) 0%,
+                    rgba(236, 204, 104, 0.05) 32%,
+                    transparent 62%
+                );
+
+            mix-blend-mode: screen;
+            animation: pulse 6s ease-in-out infinite;
+        }
+
+        .heat {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(255, 214, 120, 0.06),
+                    transparent 40%,
+                    rgba(0, 0, 0, 0.16)
+                );
+
+            mix-blend-mode: soft-light;
+            animation: shimmer 9s ease-in-out infinite;
+        }
+
+        .embers {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .ember {
+            position: absolute;
+            bottom: -8px;
+
+            width: 3px;
+            height: 3px;
+
+            border-radius: 50%;
+
+            background: rgba(236, 204, 104, 0.85);
+
+            box-shadow:
+                0 0 6px rgba(236, 204, 104, 0.7);
+
+            animation: rise linear infinite;
+        }
+
+        .visit-hint {
+            position: absolute;
+            left: 50%;
+            bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
+
+            transform: translateX(-50%);
+
+            z-index: 2;
+
+            max-width: calc(100% - 2rem);
+
+            padding: 0.6rem 1.15rem;
+
+            color: #f5d76e;
+
+            font-size: clamp(0.7rem, 2.6vw, 0.9rem);
+
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-align: center;
+
+            background: rgba(0, 0, 0, 0.55);
+
+            border:
+                1px solid
+                rgba(236, 204, 104, 0.35);
+
+            border-radius: 999px;
+
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+
+            pointer-events: none;
+
+            white-space: nowrap;
+        }
+
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes shimmer {
+            0%,
+            100% {
+                opacity: 0.45;
+            }
+
+            50% {
+                opacity: 0.85;
+            }
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translate3d(0, 0, 0);
+                opacity: 0;
+            }
+
+            12% {
+                opacity: 0.85;
+            }
+
+            100% {
+                transform:
+                    translate3d(
+                        var(--drift, 20px),
+                        -110vh,
+                        0
+                    );
+                opacity: 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .sun-glow,
+            .heat,
+            .ember {
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a
+        class="promo-link"
+        href="https://www.prodigalsunradio.com/"
+        rel="noopener noreferrer"
+        aria-label="Visit Prodigal Sun Radio"
+    >
+
+        <div class="stage">
+
+            <!-- PSR SPONSORSHIP VIDEO -->
+            <video
+                class="background-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                webkit-playsinline
+                preload="metadata"
+                poster="poster.jpg"
+            >
+                <source
+                    src="PSR%20Sponsorships.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Visual effects -->
+            <div class="video-overlay"></div>
+            <div class="sun-glow"></div>
+            <div class="heat"></div>
+
+            <!-- Floating embers -->
+            <div
+                class="embers"
+                id="embers"
+            ></div>
+
+            <!-- Click prompt -->
+            <div class="visit-hint">
+                Tap to visit Prodigal Sun Radio
+            </div>
+
+        </div>
+
+    </a>
+
+    <script>
+        (function () {
+
+            const DEST =
+                'https://www.prodigalsunradio.com/';
+
+            const link =
+                document.querySelector('.promo-link');
+
+            const video =
+                document.querySelector('.background-video');
+
+            const layer =
+                document.getElementById('embers');
+
+            const reduceMotion =
+                window.matchMedia(
+                    '(prefers-reduced-motion: reduce)'
+                ).matches;
+
+
+            /*
+             * Keep the whole page clickable.
+             * Clicking anywhere takes the visitor to PSR.
+             */
+            if (link) {
+
+                link.addEventListener('click', function (e) {
+
+                    e.preventDefault();
+
+                    window.location.assign(DEST);
+
+                });
+
+            }
+
+
+            /*
+             * Force muted autoplay where supported.
+             */
+            if (video) {
+
+                video.muted = true;
+
+                const playPromise =
+                    video.play();
+
+                if (
+                    playPromise &&
+                    typeof playPromise.catch === 'function'
+                ) {
+
+                    playPromise.catch(function () {});
+
+                }
+
+                if (reduceMotion) {
+
+                    video.pause();
+
+                }
+
+            }
+
+
+            /*
+             * Floating ember particles.
+             */
+            const isMobile =
+                /iPhone|iPad|Android/i.test(
+                    navigator.userAgent
+                );
+
+            const count =
+                isMobile ? 12 : 22;
+
+
+            if (!reduceMotion && layer) {
+
+                for (
+                    let i = 0;
+                    i < count;
+                    i += 1
+                ) {
+
+                    const spark =
+                        document.createElement('span');
+
+                    spark.className = 'ember';
+
+                    spark.style.left =
+                        Math.random() * 100 + '%';
+
+                    spark.style.setProperty(
+                        '--drift',
+                        (Math.random() * 60 - 30) + 'px'
+                    );
+
+                    spark.style.animationDuration =
+                        (6 + Math.random() * 8) + 's';
+
+                    spark.style.animationDelay =
+                        (-Math.random() * 8) + 's';
+
+                    const size =
+                        1.5 + Math.random() * 3;
+
+                    spark.style.width =
+                        size + 'px';
+
+                    spark.style.height =
+                        size + 'px';
+
+                    layer.appendChild(spark);
+
+                }
+
+            }
+
+        })();
+    </script>
+
+</body>
+</html>
