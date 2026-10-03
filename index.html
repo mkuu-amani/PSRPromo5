@@ -2,26 +2,58 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#000000">
-    <meta name="color-scheme" content="dark">
 
     <meta
-        name="description"
-        content="Discover sponsorship opportunities with Prodigal Sun Radio — independent, community-driven and ad-free. Where The Mix Never Sleeps!!"
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     >
 
+    <meta
+        name="theme-color"
+        content="#000000"
+    >
+
+    <meta
+        name="color-scheme"
+        content="dark"
+    >
+
+    <!-- SEO DESCRIPTION -->
+    <meta
+        name="description"
+        content="Supporting our community and our sporting icons. PSR, where the mix never sleeps!!"
+    >
+
+    <!-- CANONICAL -->
     <link
         rel="canonical"
         href="https://mkuu-amani.github.io/PSRPromo5/"
     >
 
-    <title>PSR Sponsorships — Prodigal Sun Radio</title>
+    <!-- PAGE TITLE -->
+    <title>
+        Prodigal Sun Radio — Where The Mix Never Sleeps!!
+    </title>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Prodigal Sun Radio">
-    <meta property="og:locale" content="en_GB">
+
+    <!-- =========================================================
+         OPEN GRAPH / FACEBOOK
+         ========================================================= -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Prodigal Sun Radio"
+    >
+
+    <meta
+        property="og:locale"
+        content="en_GB"
+    >
 
     <meta
         property="og:url"
@@ -30,12 +62,12 @@
 
     <meta
         property="og:title"
-        content="PSR Sponsorships — Prodigal Sun Radio"
+        content="Prodigal Sun Radio — Where The Mix Never Sleeps!!"
     >
 
     <meta
         property="og:description"
-        content="Discover sponsorship opportunities with Prodigal Sun Radio — independent, community-driven and ad-free. Where The Mix Never Sleeps!!"
+        content="Supporting our community and our sporting icons. PSR, where the mix never sleeps!!"
     >
 
     <meta
@@ -48,17 +80,35 @@
         content="https://mkuu-amani.github.io/PSRPromo5/facebook-card.jpg"
     >
 
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta
+        property="og:image:type"
+        content="image/jpeg"
+    >
+
+    <meta
+        property="og:image:width"
+        content="1200"
+    >
+
+    <meta
+        property="og:image:height"
+        content="630"
+    >
 
     <meta
         property="og:image:alt"
-        content="Prodigal Sun Radio sponsorship opportunities"
+        content="Prodigal Sun Radio — Where The Mix Never Sleeps!!"
     >
 
-    <!-- X / Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- =========================================================
+         X / TWITTER
+         ========================================================= -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
 
     <meta
         name="twitter:url"
@@ -67,12 +117,12 @@
 
     <meta
         name="twitter:title"
-        content="PSR Sponsorships — Prodigal Sun Radio"
+        content="Prodigal Sun Radio — Where The Mix Never Sleeps!!"
     >
 
     <meta
         name="twitter:description"
-        content="Discover sponsorship opportunities with Prodigal Sun Radio — independent, community-driven and ad-free."
+        content="Supporting our community and our sporting icons. PSR, where the mix never sleeps!!"
     >
 
     <meta
@@ -82,23 +132,39 @@
 
     <meta
         name="twitter:image:alt"
-        content="Prodigal Sun Radio sponsorship opportunities"
+        content="Prodigal Sun Radio — Where The Mix Never Sleeps!!"
     >
 
+
     <style>
+
+        /* =========================================================
+           GLOBAL RESET
+           ========================================================= */
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+
+        /* =========================================================
+           PAGE
+           ========================================================= */
+
         html,
         body {
+
             width: 100%;
             height: 100%;
+
             background: #000;
+
             overflow: hidden;
+
             color: #fff;
+
             font-family:
                 system-ui,
                 -apple-system,
@@ -107,38 +173,76 @@
                 sans-serif;
         }
 
+
+        /* =========================================================
+           FULL-SCREEN CLICKABLE AREA
+           ========================================================= */
+
         .promo-link {
+
             position: fixed;
+
             inset: 0;
+
             display: block;
+
             width: 100%;
             height: 100%;
             height: 100dvh;
+
             overflow: hidden;
+
             text-decoration: none;
+
             color: inherit;
+
             background: #000;
+
             cursor: pointer;
+
             -webkit-tap-highlight-color: transparent;
+
             touch-action: manipulation;
         }
 
+
+        /* =========================================================
+           VIDEO STAGE
+           ========================================================= */
+
         .stage {
+
             position: absolute;
+
             inset: 0;
+
             overflow: hidden;
+
             background: #000;
         }
 
+
+        /* =========================================================
+           BACKGROUND VIDEO
+           ========================================================= */
+
         .background-video {
+
             position: absolute;
+
             inset: 0;
+
             width: 100%;
             height: 100%;
+
             object-fit: contain;
+
             object-position: center center;
+
             display: block;
+
             background: #000;
+
             pointer-events: none;
 
             filter:
@@ -147,9 +251,17 @@
                 brightness(1.04);
         }
 
+
+        /* =========================================================
+           VIDEO DARKENING / CONTRAST OVERLAY
+           ========================================================= */
+
         .video-overlay {
+
             position: absolute;
+
             inset: 0;
+
             pointer-events: none;
 
             background:
@@ -157,13 +269,21 @@
                     180deg,
                     rgba(0, 0, 0, 0.18) 0%,
                     rgba(0, 0, 0, 0.04) 45%,
-                    rgba(0, 0, 0, 0.4) 100%
+                    rgba(0, 0, 0, 0.40) 100%
                 );
         }
 
+
+        /* =========================================================
+           WARM SUN GLOW
+           ========================================================= */
+
         .sun-glow {
+
             position: absolute;
+
             inset: 0;
+
             pointer-events: none;
 
             background:
@@ -175,12 +295,22 @@
                 );
 
             mix-blend-mode: screen;
-            animation: pulse 6s ease-in-out infinite;
+
+            animation:
+                pulse 6s ease-in-out infinite;
         }
 
+
+        /* =========================================================
+           HEAT / ATMOSPHERE
+           ========================================================= */
+
         .heat {
+
             position: absolute;
+
             inset: 0;
+
             pointer-events: none;
 
             background:
@@ -192,18 +322,32 @@
                 );
 
             mix-blend-mode: soft-light;
-            animation: shimmer 9s ease-in-out infinite;
+
+            animation:
+                shimmer 9s ease-in-out infinite;
         }
 
+
+        /* =========================================================
+           FLOATING EMBERS
+           ========================================================= */
+
         .embers {
+
             position: absolute;
+
             inset: 0;
+
             overflow: hidden;
+
             pointer-events: none;
         }
 
+
         .ember {
+
             position: absolute;
+
             bottom: -8px;
 
             width: 3px;
@@ -215,13 +359,22 @@
                 rgba(236, 204, 104, 0.85);
 
             box-shadow:
-                0 0 6px rgba(236, 204, 104, 0.7);
+                0 0 6px
+                rgba(236, 204, 104, 0.70);
 
-            animation: rise linear infinite;
+            animation:
+                rise linear infinite;
         }
 
+
+        /* =========================================================
+           TAP / CLICK PROMPT
+           ========================================================= */
+
         .visit-hint {
+
             position: absolute;
+
             left: 50%;
 
             bottom:
@@ -230,11 +383,13 @@
                     env(safe-area-inset-bottom, 0px)
                 );
 
-            transform: translateX(-50%);
+            transform:
+                translateX(-50%);
 
             z-index: 2;
 
-            max-width: calc(100% - 2rem);
+            max-width:
+                calc(100% - 2rem);
 
             padding:
                 0.6rem
@@ -249,9 +404,14 @@
                     0.9rem
                 );
 
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            text-align: center;
+            letter-spacing:
+                0.1em;
+
+            text-transform:
+                uppercase;
+
+            text-align:
+                center;
 
             background:
                 rgba(0, 0, 0, 0.55);
@@ -260,75 +420,121 @@
                 1px solid
                 rgba(236, 204, 104, 0.35);
 
-            border-radius: 999px;
+            border-radius:
+                999px;
 
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter:
+                blur(8px);
 
-            pointer-events: none;
+            -webkit-backdrop-filter:
+                blur(8px);
 
-            white-space: nowrap;
+            pointer-events:
+                none;
+
+            white-space:
+                nowrap;
         }
+
+
+        /* =========================================================
+           ANIMATIONS
+           ========================================================= */
 
         @keyframes pulse {
+
             0%,
             100% {
-                opacity: 0.6;
+                opacity:
+                    0.6;
             }
 
             50% {
-                opacity: 1;
+                opacity:
+                    1;
             }
         }
+
 
         @keyframes shimmer {
+
             0%,
             100% {
-                opacity: 0.45;
+                opacity:
+                    0.45;
             }
 
             50% {
-                opacity: 0.85;
+                opacity:
+                    0.85;
             }
         }
 
+
         @keyframes rise {
+
             0% {
+
                 transform:
                     translate3d(
                         0,
                         0,
                         0
                     );
-                opacity: 0;
+
+                opacity:
+                    0;
             }
 
             12% {
-                opacity: 0.85;
+
+                opacity:
+                    0.85;
             }
 
             100% {
+
                 transform:
                     translate3d(
                         var(--drift, 20px),
                         -110vh,
                         0
                     );
-                opacity: 0;
+
+                opacity:
+                    0;
             }
         }
 
-        @media (prefers-reduced-motion: reduce) {
+
+        /* =========================================================
+           REDUCED MOTION
+           ========================================================= */
+
+        @media (
+            prefers-reduced-motion: reduce
+        ) {
+
             .sun-glow,
             .heat,
             .ember {
-                animation: none !important;
+
+                animation:
+                    none !important;
             }
         }
+
     </style>
+
 </head>
 
+
 <body>
+
+
+    <!-- =========================================================
+         FULL SCREEN CLICKABLE PROMO
+         ========================================================= -->
 
     <a
         class="promo-link"
@@ -339,15 +545,22 @@
 
         <div class="stage">
 
-            <!-- PSR SPONSORSHIP VIDEO -->
+
+            <!-- =================================================
+                 PSR SPONSORSHIPS VIDEO
+                 ================================================= -->
+
             <video
                 class="background-video"
+
                 autoplay
                 muted
                 loop
                 playsinline
                 webkit-playsinline
+
                 preload="metadata"
+
                 poster="poster.jpg"
             >
 
@@ -360,31 +573,66 @@
 
             </video>
 
-            <!-- Atmospheric effects -->
-            <div class="video-overlay"></div>
-            <div class="sun-glow"></div>
-            <div class="heat"></div>
 
-            <!-- Floating embers -->
+            <!-- =================================================
+                 ATMOSPHERIC EFFECTS
+                 ================================================= -->
+
+            <div
+                class="video-overlay"
+            ></div>
+
+            <div
+                class="sun-glow"
+            ></div>
+
+            <div
+                class="heat"
+            ></div>
+
+
+            <!-- =================================================
+                 EMBER PARTICLES
+                 ================================================= -->
+
             <div
                 class="embers"
                 id="embers"
             ></div>
 
-            <!-- Click prompt -->
-            <div class="visit-hint">
+
+            <!-- =================================================
+                 VISITOR PROMPT
+                 ================================================= -->
+
+            <div
+                class="visit-hint"
+            >
                 Tap to visit Prodigal Sun Radio
             </div>
+
 
         </div>
 
     </a>
 
+
     <script>
+
         (function () {
+
+
+            /* =====================================================
+               DESTINATION
+               ===================================================== */
 
             const DEST =
                 'https://www.prodigalsunradio.com/';
+
+
+            /* =====================================================
+               ELEMENT REFERENCES
+               ===================================================== */
 
             const link =
                 document.querySelector(
@@ -401,15 +649,21 @@
                     'embers'
                 );
 
+
+            /* =====================================================
+               ACCESSIBILITY / REDUCED MOTION
+               ===================================================== */
+
             const reduceMotion =
                 window.matchMedia(
                     '(prefers-reduced-motion: reduce)'
                 ).matches;
 
 
-            /*
-             * Entire page is clickable.
-             */
+            /* =====================================================
+               CLICK / TAP HANDLER
+               ===================================================== */
+
             if (link) {
 
                 link.addEventListener(
@@ -428,9 +682,10 @@
             }
 
 
-            /*
-             * Attempt muted autoplay.
-             */
+            /* =====================================================
+               VIDEO AUTOPLAY
+               ===================================================== */
+
             if (video) {
 
                 video.muted = true;
@@ -447,8 +702,8 @@
                     playPromise.catch(
                         function () {}
                     );
-
                 }
+
 
                 if (reduceMotion) {
 
@@ -459,16 +714,20 @@
             }
 
 
-            /*
-             * Floating ember particles.
-             */
+            /* =====================================================
+               EMBER PARTICLES
+               ===================================================== */
+
             const isMobile =
                 /iPhone|iPad|Android/i.test(
                     navigator.userAgent
                 );
 
+
             const count =
-                isMobile ? 12 : 22;
+                isMobile
+                    ? 12
+                    : 22;
 
 
             if (
@@ -482,48 +741,74 @@
                     i += 1
                 ) {
 
+
                     const spark =
                         document.createElement(
                             'span'
                         );
 
+
                     spark.className =
                         'ember';
+
+
+                    /* Random horizontal position */
 
                     spark.style.left =
                         Math.random() *
                             100 +
                         '%';
 
+
+                    /* Random sideways drift */
+
                     spark.style.setProperty(
                         '--drift',
+
                         (
                             Math.random() *
-                            60 -
+                                60 -
                             30
                         ) + 'px'
                     );
 
+
+                    /* Random animation speed */
+
                     spark.style.animationDuration =
                         (
                             6 +
-                            Math.random() * 8
+                            Math.random() *
+                                8
                         ) + 's';
+
+
+                    /* Random starting point */
 
                     spark.style.animationDelay =
                         (
-                            -Math.random() * 8
+                            -Math.random() *
+                            8
                         ) + 's';
+
+
+                    /* Random particle size */
 
                     const size =
                         1.5 +
-                        Math.random() * 3;
+                        Math.random() *
+                        3;
+
 
                     spark.style.width =
-                        size + 'px';
+                        size +
+                        'px';
+
 
                     spark.style.height =
-                        size + 'px';
+                        size +
+                        'px';
+
 
                     layer.appendChild(
                         spark
@@ -533,7 +818,9 @@
 
             }
 
+
         })();
+
     </script>
 
 </body>
